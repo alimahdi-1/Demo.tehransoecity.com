@@ -1,0 +1,42 @@
+
+@font-face {
+  font-family: Vazir;
+  src: url("../Media/font/Vazir.eot");
+  src: url("../Media/font/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../Media/font/Vazir.woff") format("woff"),
+    url("../Media/font/Vazir.ttf") format("truetype");
+  font-weight: bold;
+}
+
+.container-daraje2-main {
+  width: 100%;
+  padding: 50px;
+}
+.container-daraje2-main h2 {
+  text-align: right;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+.container-daraje2-main p {
+  text-align: right;
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+.container-daraje2-main section {
+  text-align: right;
+  margin-bottom: 5px;
+}
+@media (width <= 500px) {
+  .delta-information {
+    font-size: 20px;
+  }
+}
+@media (width <= 370px) {
+  .delta-information {
+    font-size: 15px;
+  }
+  
+}

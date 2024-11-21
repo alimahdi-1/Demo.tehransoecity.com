@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Vazir;
+  src: url("../Media/font/Vazir.eot");
+  src: url("../Media/font/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../Media/font/Vazir.woff") format("woff"),
+    url("../Media/font/Vazir.ttf") format("truetype");
+  font-weight: bold;
+}
+
+.footer-main {
+  width: 90%;
+  background-color: #4a628a;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-container div {
+  font-family: Vazir;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  gap: 70px;
+  text-align: right;
+}
+.footer-container div li {
+  list-style: none;
+  text-align: right;
+}
+.copy-right-footer {
+  display: flex;
+  align-self: end;
+  text-align: right;
+  color: #ffffff47;
+}
+.footer-container-mobile {
+  display: flex;
+  flex-direction: column;
+}
+.footer-container-mobile ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  color: #fff;
+  font-family: Vazir;
+  justify-content: end;
+}
+.footer-container-mobile h4 {
+  font-weight: bold;
+  color: #FEF9F2;
+  text-align: right;
+}
+@media (width >= 800px) {
+  .footer-container-mobile {
+    display: none;
+  }
+}
+@media (width <= 800px) {
+  .copy-right-footer {
+    display: none;
+  }
+  .footer-main {
+    margin: auto;
+    width: 100%;
+  }
+  .footer-container {
+    display: none;
+  }
+  
+}
+@media (width <= 500) {
+  .footer-container div {
+    gap: 0;
+  }
+}
+@media (width <= 400px) {
+  .footer-container-mobile {
+    margin-right: 50px;
+  }
+}

@@ -1,0 +1,294 @@
+
+@font-face {
+  font-family: Vazir;
+  src: url("../Media/font/Vazir.eot");
+  src: url("../Media/font/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../Media/font/Vazir.woff") format("woff"),
+    url("../Media/font/Vazir.ttf") format("truetype");
+  font-weight: bold;
+}
+/* Header */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.navbar {
+  width: 90%;
+  height: 90px;
+  background-color: #76abae;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.navbar-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-navbar {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  background-image: url(../Media/T.png);
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex-direction: row-reverse;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-link {
+  font-family: Vazir;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #222831;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.nav-link:hover {
+  color: #222831;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+.search-input {
+  width: 50%;
+  height: 45px;
+}
+.search-input-container {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  border: none;
+  text-align: right;
+}
+.header-buttons {
+  display: flex;
+}
+.login-button {
+  width: 70px;
+  height: 40px;
+  padding: 5px 20px;
+  border: none;
+  font-size: 15px;
+  font-weight: 900;
+  font-family: "Vazir";
+  margin: 3px;
+  background-color: black;
+  color: #fff;
+  border-radius: 10px;
+}
+.sign-in-button {
+  width: 90px;
+  height: 40px;
+  padding: 5px 20px;
+  border: none;
+  font-size: 15px;
+  font-weight: 900;
+  font-family: "Vazir";
+  margin: 3px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+}
+/* Hamburger Menu Styling */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+  position: absolute;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+  position: absolute;
+}
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .header-buttons {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 30px;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #76abae;
+    z-index: 1000;
+    animation: slideIn 0.5s ease forwards;
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-links-mobile li {
+    margin: 20px 0;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: Vazir;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+/* Content Styling */
+.content {
+  /* Adjust padding to create space 
+     between navbar and content */
+  padding: 80px 20px;
+  /* Slightly different background 
+     to differentiate from navbar */
+  background-color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.content h1 {
+  font-size: 36px;
+  color: #ff9800;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.deactive-search-box {
+  display: none;
+}
+.active-search-box {
+  display: block;
+}
+.vsClose-search-box {
+  width: 20px;
+  height: 20px;
+}
+.vsSearchbox {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+.search-box-button {
+  border: none;
+  background: none;
+  color: white;
+  margin-right: 0;
+  padding: 0;
+  margin: 5px;
+}
+.active-search-box {
+  text-align: right;
+  padding-right: 10px;
+  border: none;
+}
+.container-search-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  margin: 0;
+  padding-right: 5px;
+  border-right: solid 1px #fff;
+}
+@media (width <= 1000px) {
+  .search-input-container {
+    display: none;
+  }
+}
+
+@media (width > 1000px) {
+  .container-search-box {
+    display: none;
+  }
+}
+@media (width <= 500px) {
+  .navbar {
+    width: 100%;
+  }
+}
